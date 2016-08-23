@@ -1,0 +1,23 @@
+{
+  "name": "My_Extension",
+  "version": "1.0",
+  "manifest_version": 2,
+  "description": "This is my extension.",
+  "icons": {
+    "1": "icon.png"
+  },
+  "background": {
+    "page": "background.html"
+  },
+  "permissions": ["http://*/*"],
+  "browser_action": {
+    "default_title": "",
+    "default_icon": "icon.png",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [{
+    "matches": ["http://www.theguardian.com/*"],
+    "css": ["my-style.css"],
+    "js": ["./js/jquery.min.js", "my-script.js"]
+  }]
+}
